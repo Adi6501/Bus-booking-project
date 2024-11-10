@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Routes - Quicker-Bus</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            const currentLocation = { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }; // Replace with actual latitude/longitude
+            const destination = { lat: DESTINATION_LATITUDE, lng: DESTINATION_LONGITUDE }; // Replace with actual latitude/longitude
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 7,
+                center: currentLocation,
+            });
+
+            new google.maps.Marker({
+                position: currentLocation,
+                map: map,
+                title: "Current Location",
+            });
+
+            new google.maps.Marker({
+                position: destination,
+                map: map,
+                title: "Destination",
+            });
+
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            const request = {
+                origin: currentLocation,
+                destination: destination,
+                travelMode: google.maps.TravelMode.DRIVING,
+            };
+
+            directionsService.route(request, (result, status) => {
+                if (status === "OK") {
+                    directionsRenderer.setDirections(result);
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="initMap()">
+    <div id="main">
+        <h1>Bus Routes</h1>
+        <div id="map" style="height: 500px; width: 100%;"></div>
+        <a href="index.html">Back to Home</a>
+    </div>
+</body>
+</html>

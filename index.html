@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicker-Bus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="nav-bar">
+            <div class="contents">
+                <div class="nav-item" id="home"><a href="index.html">HOME</a></div>
+                <div class="nav-item" id="about-us"><a href="about-us.html">About us</a></div>
+                <div class="nav-item" id="Bus-routes"><a href="bus-routes.html">BUS Routes</a></div>
+                <div class="nav-item" id="offers-or-promotion"><a href="offers.html">OFFERS OR PROMOTIONS</a></div>
+                <div class="nav-item" id="contact-us"><a href="contact-us.html">Contact us</a></div>
+                <div class="nav-item" id="help"><a href="#">Help/FAQ</a></div>
+                <!-- Changed sign-in button to link to signin.html -->
+                <a href="signin.html" class="nav-item" id="sign-up">Sign in</a>
+            </div>
+        </div>
+
+        <!-- Existing Content -->
+        <div class="search-bar">
+            <input type="text" id="search-bar" placeholder="Search for buses..." onkeyup="searchBus()">
+            <span class="search-icon">&#128269;</span>
+        </div>
+
+        <div id="search-results" class="search-results"></div>
+
+        <div class="container">
+            <!-- Existing containers for content -->
+            <div class="container1" id="container1">
+                <h2>Booking Process</h2>
+                <ul>
+                    <li>Search Buses: Explain how users can search for buses based on travel preferences, such as routes, timings, and operators.</li>
+                    <li>Choose Seats: Highlight the seat selection feature, which allows users to choose their preferred seat layout (e.g., window seats).</li>
+                </ul>
+            </div>
+            <div class="container1" id="container2">
+                <h2>Technical Overview</h2>
+                <ul>
+                    <li>APIs Integration: Mention integration with third-party APIs for bus schedules, payment gateways, and SMS notifications.</li>
+                    <li>Security Considerations: Highlight how the platform ensures secure transactions through encryption (e.g., SSL certificates) and other security protocols like two-factor authentication (2FA).</li>
+                </ul>
+            </div>
+            <div class="container1" id="container3">
+                <h2>User Experience</h2>
+                <ul>
+                    <li>Responsive Design: Mention how the platform is designed to work seamlessly on different devices (desktop, tablet, and mobile).</li>
+                    <li>Simple Onboarding: Highlight the ease of signing up, logging in, and starting the booking process for new users.</li>
+                    <li>Feedback Mechanism: Discuss the importance of user feedback and how the platform collects reviews and ratings for bus operators.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

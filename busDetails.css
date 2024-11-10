@@ -1,0 +1,86 @@
+/* Reset margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://media.istockphoto.com/id/1151367251/vector/seamless-texture-city-map-in-retro-style-outline-map.jpg?s=612x612&w=0&k=20&c=0EzK-SAxKD6tkZJGMjICcYenqTgL6SXc8LFGxMpHY3Y=') no-repeat center center fixed; /* Add background */
+    background-size: cover;
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between squares */
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Gap between squares */
+}
+
+.boxy {
+    width: 250px;  /* Updated width */
+    height: 250px; /* Updated height */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: solid 1px #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align items with equal space */
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.boxy:hover {
+    transform: scale(1.03);
+}
+
+.bus-image {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px; /* Add margin below the bus image */
+    align-self: flex-start; /* Align bus image to the top left */
+}
+
+.dropdown {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 15px; /* Add margin below dropdown */
+}
+
+.timing {
+    font-size: 14px; /* Slightly smaller font for 250px squares */
+    color: #333;
+    text-align: center;
+}
+
+.book-btn {
+    align-self: flex-end; /* Align button to bottom right */
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent button background */
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease, color 0.4s ease;
+}
+
+.book-btn:hover {
+    background-color: #FFD700;
+    color: #000;
+    transform: scale(1.1);
+}
